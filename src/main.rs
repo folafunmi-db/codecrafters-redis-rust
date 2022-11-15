@@ -13,7 +13,7 @@ fn main() {
         match stream {
             Ok(mut stream) => {
                 println!("accepted new connection");
-                stream.write("PING\r\n".as_bytes()).unwrap();
+                stream.write("+PONG\r\n".as_bytes()).unwrap();
             }
             Err(e) => {
                 println!("error: {}", e);
